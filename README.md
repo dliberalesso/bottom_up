@@ -1,3 +1,3 @@
 # BottomUp
 
-**TODO: Add description**
+A syntactic analyzer written in Elixir.
