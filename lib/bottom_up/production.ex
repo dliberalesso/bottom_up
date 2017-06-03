@@ -1,9 +1,10 @@
 defmodule BottomUp.Production do
-  
+
   def from(file_path), do: map_productions file_path
 
   defp map_productions(file_path) do
-    File.read!(file_path)
+    file_path
+    |> File.read!
     |> String.split("\n", trim: true)
     |> build_tuple
   end

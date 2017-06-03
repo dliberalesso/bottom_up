@@ -7,7 +7,8 @@ defmodule BottomUp do
   end
 
   defp read_input_string do
-    IO.gets("Informe uma cadeia:\n")
+    "Informe uma cadeia:\n"
+    |> IO.gets
     |> String.trim
     |> String.split("")
   end

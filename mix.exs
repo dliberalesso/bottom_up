@@ -18,6 +18,6 @@ defmodule BottomUp.Mixfile do
 
   # Dependencies
   defp deps do
-    []
+    [{:credo, "~> 0.3", only: [:dev, :test]}]
   end
 end
