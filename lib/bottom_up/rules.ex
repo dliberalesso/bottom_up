@@ -1,8 +1,6 @@
-defmodule BottomUp.Production do
+defmodule BottomUp.Rules do
 
-  def from(file_path), do: map_productions file_path
-
-  defp map_productions(file_path) do
+  def from(file_path) do
     file_path
     |> File.read!
     |> String.split("\n", trim: true)

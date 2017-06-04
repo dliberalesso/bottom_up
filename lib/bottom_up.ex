@@ -1,15 +1,19 @@
 defmodule BottomUp do
-  alias BottomUp.Production
+  alias BottomUp.{Automata, Rules}
 
-  def process(rules_path) do
-    {start_state, productions} = Production.from rules_path
-    read_input_string()
+  def process(rules_path, input_path) do
+    {init, rules} = Rules.from(rules_path)
+    prods = read_input(input_path)
+
+    for prod <- prods do
+      Automata.start([init], rules, prod)
+    end
   end
 
-  defp read_input_string do
-    "Informe uma cadeia:\n"
-    |> IO.gets
-    |> String.trim
-    |> String.split("")
+  def read_input(input_path) do
+    input_path
+    |> File.read!
+    |> String.split("\n", trim: true)
+    |> Enum.map(&String.split(&1, ~r{(\s|\b)}, trim: true))
   end
 end
