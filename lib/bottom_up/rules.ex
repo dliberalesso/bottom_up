@@ -1,5 +1,4 @@
 defmodule BottomUp.Rules do
-
   def from(file_path) do
     file_path
     |> File.read!
