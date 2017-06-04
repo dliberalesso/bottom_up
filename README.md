@@ -16,7 +16,7 @@ BottomUp.process "prod_rules", "productions"
 # [:ok, :ok, :ok, :ok, :ok, :ok, :ok, :ok]
 ```
 
-Check `prod_rules` (first line indicates the starting state) and `productions` (each line is a string to be tested) to see how to use.
+Check `prod_rules` (first line indicates the starting state) and `productions` (each line is a string to be tested, spaces are optional) to see how to use.
 
 ## TODO
 - [ ] Write some tests
